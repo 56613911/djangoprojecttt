@@ -1,0 +1,12 @@
+<!-- search_form.html -->
+<form method="post" action="{% url 'search_doctors' %}">
+    {% csrf_token %}
+    <!-- Ajoutez des champs de formulaire pour spécifier la disponibilité -->
+    <label for="monday_morning">Monday Morning</label>
+    <input type="checkbox" name="monday_morning">
+
+    <label for="monday_afternoon">Monday Afternoon</label>
+    <input type="checkbox" name="monday_afternoon">
+
+    <input type="submit" value="Search">
+</form>
